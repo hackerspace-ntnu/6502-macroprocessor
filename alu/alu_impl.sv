@@ -137,7 +137,7 @@ module alu(
 	// Half carry
 	// This line is raised if there was a carry between the lower and higher
 	// 4 bits in the full adder, or if daa is high and the lower nibble is
-  // greater than 9
+  	// greater than 9
 	carry_adjust hc_adjust (hc, carry_bridge[3], daa, sum_w[3:0]);
 
 	// Higher 4-bit full adder
@@ -158,23 +158,18 @@ module alu(
 
 	// Carry
 	// This line is raised if there was a carry from the 7th bit or if daa is high and the lower nibble is
-  // greater than 9
+  	// greater than 9
 	carry_adjust sums_adjust (sums_carry_adjusted, carry_bridge[7], daa, sum_w[7:4]);
 	and(carry_select_and_or_bridge_sums, sums_carry_adjusted, sums);
 	and(carry_select_and_or_bridge_srs, a[0], srs);
 	or(acr, carry_select_and_or_bridge_sums, carry_select_and_or_bridge_srs);
 
 	// Output select
-	wide_and out_select_0 (output_select_0, sum_w, {8{sums}});
-	wide_and out_select_1 (output_select_1, and_w, {8{ands}});
-	wide_and out_select_2 (output_select_2, or_w,  {8{ors}});
-	wide_and out_select_3 (output_select_3, xor_w, {8{eors}});
-	wide_and out_select_4 (output_select_4, sr_w,  {8{srs}});
-
-	wide_or out_select_01   (output_select_01,   output_select_0,    output_select_1);
-	wide_or out_select_23   (output_select_23,   output_select_2,    output_select_3);
-	wide_or out_select_0123 (output_select_0123, output_select_01,   output_select_23);
-	wide_or out_select      (out,                output_select_0123, output_select_4);
+ 	assign out = sums ? sum_w : {8{1'bz}};
+ 	assign out = ands ? and_w : {8{1'bz}};
+ 	assign out = ors  ? or_w  : {8{1'bz}};
+ 	assign out = eors ? xor_w : {8{1'bz}};
+ 	assign out = srs  ? sr_w  : {8{1'bz}};
 
 	// Overflow
 	// This line is raised if the sign of A and B, most significant bit, are
@@ -183,81 +178,5 @@ module alu(
 	not(avr_not_and_bridge, xor_w[7]);
 	xor(avr_xor_and_bridge, a[7], sum_w[7]);
 	and(avr, avr_not_and_bridge, avr_xor_and_bridge);
-
-endmodule
-
-`timescale 1ns / 1ps
-module full_adder(
-	input a,
-	input b,
-	input carry_in,
-	output carry_out,
-	output out);
-
-	wire [2:0] bridge;
-
-	// a ^ b
-	xor(bridge[0], a, b);
-
-	// out = (a ^ b) ^ carry_in
-	xor(out, bridge[0], carry_in);
-
-	// (a ^ b) & c
-	and(bridge[1], bridge[0], carry_in);
-
-	// a & b
-	and(bridge[2], a, b);
-
-	// carry_out = (a & b) | ((a ^ b) & c)
-	or(carry_out, bridge[1], bridge[2]);
-
-endmodule
-
-`timescale 1ns / 1ps
-module decimal_adjust_adder(
-	input dsa,
-	input daa,
-	input hc,
-	input acr,
-	input [7:0] sb,
-	output [7:0] sb_ac);
-
-	wire hc_bar, acr_bar;
-	wire daa_and_hc, daa_and_acr;
-	wire dsa_and_hc_bar, dsa_and_acr_bar;
-	wire bit_2_adjust, bit_5_adjust;
-	wire [5:0] carry_bridge;
-	wire [1:0] bridge;
-	
-	// daa & hc, daa & acr
-	and(daa_and_hc, daa, hc);
-	and(daa_and_acr, daa, acr);
-
-	// dsa & ~hc, dsa & ~acr
-	not(hc_bar, hc);
-	not(acr_bar, acr);
-	and(dsa_and_hc_bar, dsa, hc_bar);
-	and(dsa_and_acr_bar, dsa, acr_bar);
-
-	or(bit_2_adjust, daa_and_hc, dsa_and_hc_bar);
-	or(bit_5_adjust, daa_and_acr, dsa_and_acr_bar);
-
-	// 4 bit full adder
-	// add (dsa & ~hc) << 3 | (daa & hc) << 2 | (dsa & ~hc | daa & hc) << 1 | 0
-	assign sb_ac[0] = sb[0];
-	xor(sb_ac[1], sb[1], bit_2_adjust);
-	and(carry_bridge[0], sb[1], bit_2_adjust);
-	full_adder adder_0 (sb[2], daa_and_hc, carry_bridge[0], carry_bridge[1], sb_ac[2]);
-	xor(bridge[0], sb[3], dsa_and_hc_bar);
-	xor(sb_ac[3], bridge[0], carry_bridge[1]);
-
-	// 4 bit full adder
-	// add (dsa & ~acr) << 3 | (daa & acr) << 2 | (dsa & ~acr | daa & acr) << 1 | 0
-	assign sb_ac[4] = sb[4];
-	xor(sb_ac[5], sb[5], bit_5_adjust);
-	and(carry_bridge[2], sb[5], bit_5_adjust);
-	full_adder adder_1 (sb[6], daa_and_acr, carry_bridge[2], carry_bridge[3], sb_ac[6]);
-	xor(bridge[1], sb[7], dsa_and_hc_bar);
-	xor(sb_ac[7], bridge[1], carry_bridge[3]);
 
 endmodule
