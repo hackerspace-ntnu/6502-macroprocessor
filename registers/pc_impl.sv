@@ -66,7 +66,7 @@ module program_counter_low_register(
 	assign db_bus  = (pcl_db  ? state : {8{1'bz}});
 	assign adl_bus = (pcl_adl ? state : {8{1'bz}});
 
-	always @ (negedge phi_2)
+	always @ (phi_2)
 	begin
 		state <= pcl_inc_to_pcl;
 	end
@@ -141,7 +141,7 @@ module program_counter_high_register(
 	assign db_bus  = (pch_db  ? state : {8{1'bz}});
 	assign adl_bus = (pch_adh ? state : {8{1'bz}});
 
-	always @ (negedge phi_2)
+	always @ (phi_2)
 	begin
 		state <= pch_sel_inc_to_pch;
 	end

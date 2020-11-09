@@ -15,7 +15,7 @@ module adder_hold_register(
 	assign sb_bus[7]   = (add_sb_7  ? state[7]   : 1'bz);
 	assign sb_bus[6:0] = (add_sb_60 ? state[6:0] : {7{1'bz}});
 
-	always @ (negedge phi_2)
+	always @ (phi_2)
 	begin
 		state <= alu_to_add;
 	end
