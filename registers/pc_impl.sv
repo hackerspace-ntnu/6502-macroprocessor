@@ -7,7 +7,7 @@ module program_counter_low_select(
 	input [7:0] adl_bus,
 	output [7:0] pcl_sel_to_pcl_inc);
 
-	reg state;
+	reg [7:0] state;
 
 	assign state              = (pcl_pcl ? pcl_bus : {8{1'bz}}) | (adl_pcl ? adl_bus : {8{1'bz}});
 	assign pcl_sel_to_pcl_inc = state;
@@ -60,7 +60,7 @@ module program_counter_low_register(
 	output [7:0] db_bus,
 	output [7:0] adl_bus);
 
-	reg state;
+	reg [7:0] state;
 
 	assign pcl_bus = state;
 	assign db_bus  = (pcl_db  ? state : {8{1'bz}});
@@ -73,6 +73,7 @@ module program_counter_low_register(
 
 endmodule
 
+`timescale 1ns / 1ps
 module program_counter_high_select(
 	input pch_pch,
 	input adh_pch,
@@ -81,13 +82,14 @@ module program_counter_high_select(
 	input [7:0] adh_bus,
 	output [7:0] pchs);
 
-	reg state;
+	reg [7:0] state;
 
 	assign state = (pch_pch ? pch_bus : {8{1'bz}}) | (adh_pch  ? pch_bus : {8{1'bz}});
 	assign pchs  = state;
 
 endmodule
 
+`timescale 1ns / 1ps
 module program_counter_high_increment(
 	input pclc,
 	output pchc,
@@ -122,6 +124,7 @@ module program_counter_high_increment(
 
 endmodule
 
+`timescale 1ns / 1ps
 module program_counter_high_register(
 	input phi_2,
 	input pch_db,
@@ -132,7 +135,7 @@ module program_counter_high_register(
 	output [7:0] db_bus,
 	output [7:0] adl_bus);
 
-	reg state;
+	reg [7:0] state;
 
 	assign pch_bus = state;
 	assign db_bus  = (pch_db  ? state : {8{1'bz}});
