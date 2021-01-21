@@ -81,7 +81,7 @@ function go(){
 			localStorage.setItem("t4", JSON.stringify(t4));
 			localStorage.setItem("t5", JSON.stringify(t5));
 			localStorage.setItem("t6", JSON.stringify(t6));
-			//window.location = "http://localhost:5500/calc.html"
+			window.location = "http://localhost:5500/calc.html"
 		}
 	}
 	if(running) {
