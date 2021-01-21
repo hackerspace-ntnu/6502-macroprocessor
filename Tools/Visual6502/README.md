@@ -8,3 +8,7 @@ Her er filer for å gå gjennom og inspisere dataen som er hentet ut fra visual6
 > visual6502
 
 JS-simulatoren seg selv, med de modifiserte filene jeg lagde. Filen av interesse er `macrosmod.js`, rundt linje 293. er mesteparten av mine endringer, og linjer 75-84.
+
+----
+
+For å hente ut data åpner du `calc.html`, så er det bare å vente til den har gått gjennom alle opcodes (0-FF). Når dette er slutt vil den generere en blob og presentere denne for deg i råformat.
