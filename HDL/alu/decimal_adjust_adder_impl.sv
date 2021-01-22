@@ -1,4 +1,20 @@
-`include "../utility.sv"
+`timescale 1ns / 1ps
+module full_adder(
+	input a,
+	input b,
+	input carry_in,
+	output carry_out,
+	output result);
+	
+	wire [2:0] bridge;
+	
+	xor(bridge[0], a, b);
+	xor(result, bridge[0], carry_in);
+	
+	and(bridge[1], a, b);
+	and(bridge[2], bridge[0], carry_in);
+	or(carry_out, bridge[1], bridge[2]);
+endmodule
 
 `timescale 1ns / 1ps
 module decimal_adjust_adder(
