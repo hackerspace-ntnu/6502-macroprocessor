@@ -23,7 +23,7 @@
 var ctrace = false;
 var traceTheseNodes = [];
 var traceTheseTransistors = [];
-var loglevel = 0;
+var loglevel = 8;
 var recalclist = new Array();
 var recalcHash = new Array();
 var group = new Array();
