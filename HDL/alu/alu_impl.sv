@@ -44,6 +44,7 @@ module alu_full_adder(
 
 endmodule
 
+`timescale 1ns / 1ps
 module carry_adjust(
 	output adjusted_carry,
 	input carry,
