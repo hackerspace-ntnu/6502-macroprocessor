@@ -1,4 +1,3 @@
-// Code your design here
 module latch_rcl (data_out, in, clk);
     input in, clk;
     output data_out;
@@ -7,6 +6,7 @@ module latch_rcl (data_out, in, clk);
     always @ (clk)
         data_out <= in;
 endmodule
+
 module RandomLogic (
     // Outputs
     BRK5, BR2, _ADL_PCL, PC_DB, 
