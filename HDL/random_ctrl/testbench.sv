@@ -93,30 +93,40 @@ module testbench;
     $dumpfile("dump.vcd");
     $dumpvars(1, testbench);
     
-    PHI0 = 0'b0;
-    #5;
+    PHI0 = 1'b0;
+    #50;
     
-    decoder = 0;
-    
-    BRK6E = 1;
-    Z_ADL0 = 1;
-    SO = 1;
-    RDY = 1;
-    BRFW = 1;
-    ACRL2 = 1;
+	//decoder = 0 << 128 +  9511602414080229376 << 64 +  0
+	//decoder = 0 << 128 +  4755801207576985600 << 64 +  0;
+	decoder = 0;
+
+    PHI0   = 0;
+    BRK6E  = 0;
+    Z_ADL0 = 0;
+    SO     = 0;
+    RDY    = 1;
+    BRFW   = 1;
+    ACRL2  = 0;
     _C_OUT = 1;
     _D_OUT = 1;
-    _ready = 1;
+    _ready = 0;
     T0 = 1;
-    T1 = 1;
+    T1 = 0;
     T5 = 1;
-    T6 = 1;
+    T6 = 0;
     
-    #5;
+    #50;
+
+	$display("DL_DB: ", DL_DB);
+	$display("DL_ADL: ", DL_ADL);
+	$display("DL_ADH: ", DL_ADH);
+	$display("Z_ADH0: ", Z_ADH0);
+	$display("Z_ADH17: ", Z_ADH17);
+	$display("ADH_ABH: ", ADH_ABH);
+	$display("ADL_ABL: ", ADL_ABL);
+	$display("PCL_PCL: ", PCL_PCL);
+	$display("ADL_PCL: ", ADL_PCL);
 
     $finish;
   end
-  
-  always #1 PHI0 = ~PHI0;
-  
 endmodule
