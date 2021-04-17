@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 11693 16535 portrait
 encoding utf-8
-Sheet 3 3
+Sheet 2 2
 Title ""
 Date ""
 Rev ""
@@ -208,15 +208,15 @@ Wire Wire Line
 Wire Wire Line
 	1400 3800 1500 3800
 $Comp
-L 74xx:74HCT541 U?
+L 6502:74HC541 U?
 U 1 1 63074D6C
 P 3100 4000
 AR Path="/60B9CD47/63074D6C" Ref="U?"  Part="1" 
 AR Path="/628D8D48/63074D6C" Ref="U?"  Part="1" 
 F 0 "U?" V 3450 3700 50  0000 R CNN
-F 1 "74HCT541" V 3550 3700 50  0000 R CNN
+F 1 "74HC541" V 3550 3700 50  0000 R CNN
 F 2 "" H 3100 4000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74HCT541" H 3100 4000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS540" H 3100 4000 50  0001 C CNN
 	1    3100 4000
 	0    -1   1    0   
 $EndComp
@@ -301,28 +301,28 @@ Q6
 Text Label 3300 6400 1    50   ~ 0
 Q7
 $Comp
-L 74xx:74LS540 U?
+L 6502:74HC540 U?
 U 1 1 63D46498
 P 3100 5800
 AR Path="/63D46498" Ref="U?"  Part="1" 
 AR Path="/60B9CD47/63D46498" Ref="U?"  Part="1" 
 AR Path="/628D8D48/63D46498" Ref="U?"  Part="1" 
 F 0 "U?" V 3450 5500 50  0000 R CNN
-F 1 "74LS540" V 3550 5500 50  0000 R CNN
+F 1 "74HC540" V 3550 5500 50  0000 R CNN
 F 2 "" H 3100 5800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS540" H 3100 5800 50  0001 C CNN
 	1    3100 5800
 	0    -1   1    0   
 $EndComp
 $Comp
-L 74xx:74LS573 U?
+L 6502:74HCT573 U?
 U 1 1 63DA36B1
 P 6500 8300
 AR Path="/63DA36B1" Ref="U?"  Part="1" 
 AR Path="/60B9CD47/63DA36B1" Ref="U?"  Part="1" 
 AR Path="/628D8D48/63DA36B1" Ref="U?"  Part="1" 
 F 0 "U?" V 6250 7600 50  0000 C CNN
-F 1 "74LS573" V 6350 7500 50  0000 C CNN
+F 1 "74HCT573" V 6350 7500 50  0000 C CNN
 F 2 "" H 6500 8300 50  0001 C CNN
 F 3 "74xx/74hc573.pdf" H 6500 8300 50  0001 C CNN
 	1    6500 8300
@@ -650,14 +650,14 @@ Q6
 Text Label 3300 8200 1    50   ~ 0
 Q7
 $Comp
-L 74xx:74LS540 U?
+L 6502:74HC540 U?
 U 1 1 65B015A7
 P 3100 7600
 AR Path="/65B015A7" Ref="U?"  Part="1" 
 AR Path="/60B9CD47/65B015A7" Ref="U?"  Part="1" 
 AR Path="/628D8D48/65B015A7" Ref="U?"  Part="1" 
 F 0 "U?" V 3450 7300 50  0000 R CNN
-F 1 "74LS540" V 3550 7300 50  0000 R CNN
+F 1 "74HC540" V 3550 7300 50  0000 R CNN
 F 2 "" H 3100 7600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS540" H 3100 7600 50  0001 C CNN
 	1    3100 7600
@@ -1046,15 +1046,15 @@ F 3 "74xx/74ls86.pdf" H 4195 8740 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HCT541 U?
+L 6502:74HC541 U?
 U 1 1 66EEAACD
 P 3100 9400
 AR Path="/60B9CD47/66EEAACD" Ref="U?"  Part="1" 
 AR Path="/628D8D48/66EEAACD" Ref="U?"  Part="1" 
 F 0 "U?" V 3450 9100 50  0000 R CNN
-F 1 "74HCT541" V 3550 9100 50  0000 R CNN
+F 1 "74HC541" V 3550 9100 50  0000 R CNN
 F 2 "" H 3100 9400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74HCT541" H 3100 9400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS540" H 3100 9400 50  0001 C CNN
 	1    3100 9400
 	0    -1   1    0   
 $EndComp
@@ -1351,58 +1351,58 @@ Wire Wire Line
 Wire Wire Line
 	5400 2800 5800 2800
 $Comp
-L 74xx:74LS573 U?
+L 6502:74HCT573 U?
 U 1 1 629E37A9
 P 6300 2800
 AR Path="/629E37A9" Ref="U?"  Part="1" 
 AR Path="/60B9CD47/629E37A9" Ref="U?"  Part="1" 
 AR Path="/628D8D48/629E37A9" Ref="U?"  Part="1" 
 F 0 "U?" H 6600 2100 50  0000 R BNN
-F 1 "74LS573" H 6000 2100 50  0000 L BNN
+F 1 "74HCT573" H 6000 2100 50  0000 L BNN
 F 2 "" H 6300 2800 50  0001 C CNN
 F 3 "74xx/74hc573.pdf" H 6300 2800 50  0001 C CNN
 	1    6300 2800
 	-1   0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS540 U?
+L 6502:74HC540 U?
 U 1 1 629E37AF
 P 7700 3600
 AR Path="/629E37AF" Ref="U?"  Part="1" 
 AR Path="/60B9CD47/629E37AF" Ref="U?"  Part="1" 
 AR Path="/628D8D48/629E37AF" Ref="U?"  Part="1" 
 F 0 "U?" V 8200 3300 50  0000 R BNN
-F 1 "74LS540" V 8100 3300 50  0000 R BNN
+F 1 "74HC540" V 8100 3300 50  0000 R BNN
 F 2 "" H 7700 3600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS540" H 7700 3600 50  0001 C CNN
 	1    7700 3600
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74xx:74HCT541 U?
+L 6502:74HC541 U?
 U 1 1 629E3A3A
 P 10500 3600
 AR Path="/629E3A3A" Ref="U?"  Part="1" 
 AR Path="/60B9CD47/629E3A3A" Ref="U?"  Part="1" 
 AR Path="/628D8D48/629E3A3A" Ref="U?"  Part="1" 
 F 0 "U?" V 11000 3300 50  0000 R BNN
-F 1 "74HCT541" V 10900 3300 50  0000 R BNN
+F 1 "74HC541" V 10900 3300 50  0000 R BNN
 F 2 "" H 10500 3600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74HCT541" H 10500 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS540" H 10500 3600 50  0001 C CNN
 	1    10500 3600
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74xx:74HCT541 U?
+L 6502:74HC541 U?
 U 1 1 629E3A5D
 P 9100 3600
 AR Path="/629E3A5D" Ref="U?"  Part="1" 
 AR Path="/60B9CD47/629E3A5D" Ref="U?"  Part="1" 
 AR Path="/628D8D48/629E3A5D" Ref="U?"  Part="1" 
 F 0 "U?" V 9600 3300 50  0000 R BNN
-F 1 "74HCT541" V 9500 3300 50  0000 R BNN
+F 1 "74HC541" V 9500 3300 50  0000 R BNN
 F 2 "" H 9100 3600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74HCT541" H 9100 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS540" H 9100 3600 50  0001 C CNN
 	1    9100 3600
 	0    -1   -1   0   
 $EndComp
@@ -1989,6 +1989,8 @@ Text Notes 11100 10100 2    250  ~ 50
 OUTPUT->
 Wire Notes Line width 20
 	500  10200 11200 10200
+Text GLabel 9600 7800 2    50   Input ~ 0
+ADL[0..7]
 Wire Bus Line
 	5800 6300 5800 7500
 Wire Bus Line
@@ -2013,6 +2015,4 @@ Wire Bus Line
 	10000 4300 10800 4300
 Wire Bus Line
 	7200 4300 9400 4300
-Text GLabel 9600 7800 2    50   Input ~ 0
-ADL[0..7]
 $EndSCHEMATC
