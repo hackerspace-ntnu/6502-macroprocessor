@@ -3,7 +3,7 @@ module latch_rcl (data_out, in, clk);
     output data_out;
     reg data_out;
 
-    always @ (clk)
+    always @ (posedge clk)
         data_out <= in;
 endmodule
 

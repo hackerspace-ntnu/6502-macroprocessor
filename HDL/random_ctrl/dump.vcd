@@ -1,0 +1,283 @@
+$date
+	Thu Sep 23 19:22:01 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! PCH_ADH $end
+$var wire 1 " _DSA $end
+$var wire 1 # _DAA $end
+$var wire 1 $ _ADL_PCL $end
+$var wire 1 % _ADDC $end
+$var wire 1 & Z_ADH17 $end
+$var wire 1 ' Z_ADH0 $end
+$var wire 1 ( Z_ADD $end
+$var wire 1 ) ZERO_V $end
+$var wire 1 * Y_SB $end
+$var wire 1 + X_SB $end
+$var wire 1 , S_SB $end
+$var wire 1 - S_S $end
+$var wire 1 . S_ADL $end
+$var wire 1 / SUMS $end
+$var wire 1 0 SRS $end
+$var wire 1 1 SB_Y $end
+$var wire 1 2 SB_X $end
+$var wire 1 3 SB_S $end
+$var wire 1 4 SB_DB $end
+$var wire 1 5 SB_ADH $end
+$var wire 1 6 SB_ADD $end
+$var wire 1 7 SB_AC $end
+$var wire 1 8 P_DB $end
+$var wire 1 9 PC_DB $end
+$var wire 1 : PCL_PCL $end
+$var wire 1 ; PCL_DB $end
+$var wire 1 < PCL_ADL $end
+$var wire 1 = PCH_PCH $end
+$var wire 1 > PCH_DB $end
+$var wire 1 ? ORS $end
+$var wire 1 @ ONE_V $end
+$var wire 1 A NDB_ADD $end
+$var wire 1 B IR5_I $end
+$var wire 1 C IR5_D $end
+$var wire 1 D IR5_C $end
+$var wire 1 E EORS $end
+$var wire 1 F DL_DB $end
+$var wire 1 G DL_ADL $end
+$var wire 1 H DL_ADH $end
+$var wire 1 I DB_V $end
+$var wire 1 J DB_P $end
+$var wire 1 K DB_N $end
+$var wire 1 L DB_C $end
+$var wire 1 M DB_ADD $end
+$var wire 1 N DBZ_Z $end
+$var wire 1 O BRK5 $end
+$var wire 1 P BR2 $end
+$var wire 1 Q AVR_V $end
+$var wire 1 R ANDS $end
+$var wire 1 S ADL_PCL $end
+$var wire 1 T ADL_ADD $end
+$var wire 1 U ADL_ABL $end
+$var wire 1 V ADH_PCH $end
+$var wire 1 W ADH_ABH $end
+$var wire 1 X ADD_SB7 $end
+$var wire 1 Y ADD_SB06 $end
+$var wire 1 Z ADD_ADL $end
+$var wire 1 [ AC_SB $end
+$var wire 1 \ AC_DB $end
+$var wire 1 ] ACR_C $end
+$var reg 1 ^ ACRL2 $end
+$var reg 1 _ BRFW $end
+$var reg 1 ` BRK6E $end
+$var reg 1 a PHI0 $end
+$var reg 1 b RDY $end
+$var reg 1 c SO $end
+$var reg 1 d T0 $end
+$var reg 1 e T1 $end
+$var reg 1 f T5 $end
+$var reg 1 g T6 $end
+$var reg 1 h Z_ADL0 $end
+$var reg 1 i _C_OUT $end
+$var reg 1 j _D_OUT $end
+$var reg 1 k _ready $end
+$var reg 130 l decoder [129:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100100000000000000000000000000000000000000000000000000010000000000000000000000000000000000000100000000 l
+0k
+1j
+1i
+0h
+0g
+0f
+0e
+0d
+0c
+1b
+0a
+0`
+1_
+0^
+x]
+x\
+x[
+xZ
+xY
+xX
+xW
+xV
+xU
+xT
+xS
+xR
+xQ
+0P
+0O
+xN
+xM
+xL
+xK
+xJ
+xI
+xH
+xG
+xF
+xE
+xD
+xC
+xB
+xA
+x@
+x?
+x>
+x=
+x<
+x;
+x:
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+x(
+x'
+x&
+x%
+0$
+x#
+x"
+z!
+$end
+#10
+0I
+0,
+0.
+0Z
+04
+0>
+1<
+0G
+1H
+1F
+1W
+1U
+0'
+0&
+18
+0]
+1J
+0D
+0B
+0C
+0)
+0Q
+0*
+0+
+01
+02
+03
+0-
+0A
+0M
+0(
+06
+0T
+07
+0[
+0\
+0V
+0=
+0:
+0S
+1a
+#15
+19
+1#
+1"
+1/
+00
+0?
+0E
+0R
+1%
+1+
+1-
+1M
+16
+1V
+1S
+0a
+#20
+0K
+1L
+0N
+1;
+05
+0Y
+1X
+0@
+0+
+0-
+0M
+06
+0V
+0S
+1a
+#25
+1+
+1-
+1M
+16
+1V
+1S
+0a
+#30
+0+
+0-
+0M
+06
+0V
+0S
+1a
+#35
+1+
+1-
+1M
+16
+1V
+1S
+0a
+#40
+0+
+0-
+0M
+06
+0V
+0S
+1a
+#45
+1+
+1-
+1M
+16
+1V
+1S
+0a
+#95

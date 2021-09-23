@@ -93,30 +93,63 @@ module testbench;
     $dumpfile("dump.vcd");
     $dumpvars(1, testbench);
     
-    PHI0 = 1'b0;
-    #50;
-    
 	//decoder = 0 << 128 +  9511602414080229376 << 64 +  0
 	//decoder = 0 << 128 +  4755801207576985600 << 64 +  0;
-	decoder = 0;
+	//decoder = 1 << 3 | 1 << 8 | 1 << 35;
+  decoder = 130'b0000000000000000000000000000100100000000000000000000000000000000000000000000000000010000000000000000000000000000000000000100000000;
 
-    PHI0   = 0;
-    BRK6E  = 0;
-    Z_ADL0 = 0;
-    SO     = 0;
-    RDY    = 1;
-    BRFW   = 1;
-    ACRL2  = 0;
-    _C_OUT = 1;
-    _D_OUT = 1;
-    _ready = 0;
-    T0 = 1;
-    T1 = 0;
-    T5 = 1;
-    T6 = 0;
-    
-    #50;
+  PHI0   = 0;
+  BRK6E  = 0;
+  Z_ADL0 = 0;
+  SO     = 0;
+  RDY    = 1;
+  BRFW   = 1;
+  ACRL2  = 0;
+  _C_OUT = 1;
+  _D_OUT = 1;
+  _ready = 0;
+  T0 = 0;
+  T1 = 0;
+  T5 = 0;
+  T6 = 0;
+  
+  #5;
+  PHI0 = 0;
+  #5;
+  PHI0 = 1;  
+  #5;
+  PHI0 = 0;
+  #5;
+  PHI0 = 1;  
+  #5;
+  PHI0 = 0;
+  #5;
+  PHI0 = 1;  
+  #5;
+  PHI0 = 0;
+  #5;
+  PHI0 = 1;  
+  #5;
+  PHI0 = 0;
+  #50;
 
+
+	$display("Using input: ");
+  $display("PHI0: ", PHI0);
+  $display("BRK6E: ", BRK6E);
+  $display("Z_ADL0: ", Z_ADL0);
+  $display("SO: ", SO);
+  $display("RDY: ", RDY);
+  $display("BRFW: ", BRFW);
+  $display("ACRL2: ", ACRL2);
+  $display("_C_OUT: ", _C_OUT);
+  $display("_D_OUT: ", _D_OUT);
+  $display("_ready: ", _ready);
+  $display("T0: ", T0);
+  $display("T1: ", T1);
+  $display("T5: ", T5);
+  $display("T6: ", T6);
+  $display("-----------");
 	$display("DL_DB: ", DL_DB);
 	$display("DL_ADL: ", DL_ADL);
 	$display("DL_ADH: ", DL_ADH);
@@ -126,7 +159,18 @@ module testbench;
 	$display("ADL_ABL: ", ADL_ABL);
 	$display("PCL_PCL: ", PCL_PCL);
 	$display("ADL_PCL: ", ADL_PCL);
+	$display("I/PC: x");
+	$display("PCL/DB: ", PCL_DB);
+	$display("PCL_ADL: ", PCL_ADL);
+	$display("PCH_PCH: ", PCH_PCH);
+	$display("ADH_PCH: ", ADH_PCH);
+	$display("PCH_DB: ", PCH_DB);
+	$display("PCH_ADH: ", PCH_ADH);
+	$display("SB_ADH: ", SB_ADH);
+	$display("SB_DB: ", SB_DB);
+	$display("0_ADL0: ", Z_ADL0);
+	$display("0_ADL1: x");
 
-    $finish;
+  $finish;
   end
 endmodule
