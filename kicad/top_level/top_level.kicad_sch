@@ -111,7 +111,7 @@
     (property "Sheet name" "B INPUT" (id 0) (at 199.39 47.5484 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheet file" "registers\\reg_tiso.kicad_sch" (id 1) (at 199.39 57.7346 0)
+    (property "Sheet file" "registers/reg_tiso.kicad_sch" (id 1) (at 199.39 57.7346 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
   )
