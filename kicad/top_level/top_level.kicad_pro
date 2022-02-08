@@ -366,6 +366,10 @@
       "PROGRAM COUNTER HIGH"
     ],
     [
+      "5209ee21-b9bc-43e7-98b8-8512844c4760",
+      "STACK POINTER"
+    ],
+    [
       "cf533c45-c632-483f-ae69-36538f7b8a37",
       "ALU"
     ],
@@ -378,16 +382,60 @@
       "PROGRAM COUNTER LOW"
     ],
     [
+      "9847cb8d-85dd-4f14-baa8-133c83e61623",
+      "B INPUT"
+    ],
+    [
       "e1f48394-fb09-4abd-a461-39038b654295",
       "PROCESSOR STATUS REGISTER"
+    ],
+    [
+      "54340547-293f-42b3-b4c8-12a6b624feb4",
+      "INPUT DATA LATCH"
+    ],
+    [
+      "ba156237-0f7a-4fb9-8f50-dad0b83870b9",
+      "ADDER HOLD REGISTER"
     ],
     [
       "8a47721d-ec29-4274-8fda-1028caa4df53",
       "regled"
     ],
     [
+      "9e309c1f-2b88-436c-8ca5-21e583a954bd",
+      "ACCUMULATOR"
+    ],
+    [
+      "ea1b32e3-3cb2-4528-9c5f-f4e1adfab80d",
+      "A INPUT"
+    ],
+    [
       "dcf4f85a-aa88-4be5-970a-6e101386f216",
       "X INDEX REGISTER"
+    ],
+    [
+      "8a47721d-ec29-4274-8fda-1028caa4df53",
+      "regled"
+    ],
+    [
+      "e570324f-8905-4506-82b9-668b56c7b837",
+      "regled"
+    ],
+    [
+      "102b11c9-f141-4328-af2c-4d382dc9e31e",
+      "regled"
+    ],
+    [
+      "102b11c9-f141-4328-af2c-4d382dc9e31e",
+      "regled"
+    ],
+    [
+      "102b11c9-f141-4328-af2c-4d382dc9e31e",
+      "regled"
+    ],
+    [
+      "935e6244-a002-4162-989e-1b4c8eee95bc",
+      "regled"
     ]
   ],
   "text_variables": {}
