@@ -362,8 +362,24 @@
       "DATA OUTPUT REGISTER"
     ],
     [
+      "48a6da7e-9214-438f-b562-3df14a9a3c45",
+      "PROGRAM COUNTER HIGH"
+    ],
+    [
       "cf533c45-c632-483f-ae69-36538f7b8a37",
       "ALU"
+    ],
+    [
+      "f4c1987e-1abd-4604-acec-54db97a4dd27",
+      "INSTRUCTION DECODE"
+    ],
+    [
+      "97f7bdfb-063c-422d-933c-6d8278ccd0d3",
+      "PROGRAM COUNTER LOW"
+    ],
+    [
+      "e1f48394-fb09-4abd-a461-39038b654295",
+      "PROCESSOR STATUS REGISTER"
     ],
     [
       "8a47721d-ec29-4274-8fda-1028caa4df53",
